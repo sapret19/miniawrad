@@ -90,27 +90,7 @@ class _TawassulState extends State<Tawassul> {
           }
         },
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 55,
-          child: Center(
-            child: Text(
-              '© annur2malang',
-              style: TextStyle(
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.w700,
-                  fontSize: 12),
-            ),
-          ),
-          decoration: BoxDecoration(color: Colors.white, boxShadow: [
-            BoxShadow(
-                color: Color.fromARGB(255, 82, 82, 82).withOpacity(0.25),
-                offset: Offset(0, 0),
-                blurRadius: 4,
-                spreadRadius: 4)
-          ]),
-        ),
-      ),
+
     );
   }
 }

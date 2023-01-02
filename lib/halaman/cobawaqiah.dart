@@ -75,21 +75,21 @@ class _IniWaqiahState extends State<IniWaqiah> {
                                         height: 2.5),
                                   ),
                                 ),
-                                const SizedBox(height: 30),
-                                Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    textAlign: TextAlign.left,
-                                    items[index].arti.toString(),
-                                    style: const TextStyle(
-                                        fontSize: 16,
-                                        fontFamily: "PlusJakartaSans",
-                                        fontWeight: FontWeight.normal,
-                                        height: 1.5,
-                                        color: rootBundle.Color.fromARGB(
-                                            255, 109, 109, 109)),
-                                  ),
-                                ),
+                                // const SizedBox(height: 30),
+                                // Align(
+                                //   alignment: Alignment.centerLeft,
+                                //   child: Text(
+                                //     textAlign: TextAlign.left,
+                                //     items[index].arti.toString(),
+                                //     style: const TextStyle(
+                                //         fontSize: 16,
+                                //         fontFamily: "PlusJakartaSans",
+                                //         fontWeight: FontWeight.normal,
+                                //         height: 1.5,
+                                //         color: rootBundle.Color.fromARGB(
+                                //             255, 109, 109, 109)),
+                                //   ),
+                                // ),
                               ],
                             ),
                           )),
@@ -106,27 +106,7 @@ class _IniWaqiahState extends State<IniWaqiah> {
           }
         },
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 55,
-          child: Center(
-            child: Text(
-              '© annur2malang',
-              style: TextStyle(
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.w700,
-                  fontSize: 12),
-            ),
-          ),
-          decoration: BoxDecoration(color: Colors.white, boxShadow: [
-            BoxShadow(
-                color: Color.fromARGB(255, 82, 82, 82).withOpacity(0.25),
-                offset: Offset(0, 0),
-                blurRadius: 4,
-                spreadRadius: 4)
-          ]),
-        ),
-      ),
+
     );
   }
 }

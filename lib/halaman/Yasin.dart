@@ -67,23 +67,23 @@ class _YasinState extends State<Yasin> {
                                         height: 2.5),
                                   ),
                                 ),
-                                const SizedBox(
-                                  height: 30,
-                                ),
-                                Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    textAlign: TextAlign.justify,
-                                    items[index].arti.toString(),
-                                    style: const TextStyle(
-                                        fontSize: 16,
-                                        fontFamily: "PlusJakartaSans",
-                                        fontWeight: FontWeight.normal,
-                                        height: 1.5,
-                                        color: rootBundle.Color.fromARGB(
-                                            255, 109, 109, 109)),
-                                  ),
-                                ),
+                                // const SizedBox(
+                                //   height: 30,
+                                // ),
+                                // Align(
+                                //   alignment: Alignment.centerLeft,
+                                //   child: Text(
+                                //     textAlign: TextAlign.justify,
+                                //     items[index].arti.toString(),
+                                //     style: const TextStyle(
+                                //         fontSize: 16,
+                                //         fontFamily: "PlusJakartaSans",
+                                //         fontWeight: FontWeight.normal,
+                                //         height: 1.5,
+                                //         color: rootBundle.Color.fromARGB(
+                                //             255, 109, 109, 109)),
+                                //   ),
+                                // ),
                               ],
                             ),
                           )),
