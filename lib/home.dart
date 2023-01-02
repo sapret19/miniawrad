@@ -47,7 +47,7 @@ class _homeState extends State<home> {
                           child: Container(
                             alignment: Alignment(0, 0.65),
                             child: Text(
-                              'AN-NUR II AL-MURTADLO',
+                              'Mini Awrad Santri',
                               style: TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.bold,
