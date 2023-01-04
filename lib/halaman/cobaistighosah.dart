@@ -5,6 +5,7 @@ import 'package:flutter/services.dart' as rootBundle;
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:zoom_widget/zoom_widget.dart';
 
 class IniIstighosah extends StatefulWidget {
   const IniIstighosah({super.key});
@@ -44,9 +45,9 @@ class _IniIstighosahState extends State<IniIstighosah> {
                   return Container(
                     padding: EdgeInsets.only(top: 10),
                     decoration: BoxDecoration(color: Colors.white),
-                    margin: EdgeInsets.symmetric(vertical: 1),
+                    margin: const EdgeInsets.symmetric(vertical: 1),
                     child: Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -57,18 +58,19 @@ class _IniIstighosahState extends State<IniIstighosah> {
                           // ),
                           Expanded(
                               child: Container(
-                            padding:
-                                EdgeInsets.only(bottom: 8, left: 20, right: 15),
+                            padding: const EdgeInsets.only(
+                                bottom: 8, left: 20, right: 15),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8, right: 8),
-                                  child: Text(
+                                  padding:
+                                      const EdgeInsets.only(left: 8, right: 8),
+                                  child: SelectableText(
                                     textAlign: TextAlign.end,
                                     items[index].arabic.toString(),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 20,
                                         fontFamily: "LPMQ IsepMisbah",
                                         fontWeight: FontWeight.w500,
@@ -85,7 +87,7 @@ class _IniIstighosahState extends State<IniIstighosah> {
                 });
           } else {
             // show circular progress while data is getting fetched from json file
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
