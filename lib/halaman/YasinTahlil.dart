@@ -29,8 +29,9 @@ class _TabBarPageState extends State<YasinTahlil>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color.fromARGB(255, 68, 118, 218),
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 68, 118, 218),
         centerTitle: true,
         title: const Text(
           'Yasin dan Tahlil',
@@ -61,7 +62,7 @@ class _TabBarPageState extends State<YasinTahlil>
                         indicatorColor: Colors.white,
                         // indicatorWeight: 2,
                         indicator: BoxDecoration(
-                          color: Colors.blue,
+                          color: Color.fromARGB(255, 68, 118, 218),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         controller: tabController,
@@ -116,7 +117,6 @@ class _TabBarPageState extends State<YasinTahlil>
           ),
         ),
       ),
-
     );
   }
 }

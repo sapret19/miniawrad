@@ -65,7 +65,7 @@ class _IniDoaIstighosahState extends State<IniDoaIstighosah> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.only(left: 8, right: 8),
-                                  child: Text(
+                                  child: SelectableText(
                                     textAlign: TextAlign.justify,
                                     items[index].arabic.toString(),
                                     style: TextStyle(

@@ -32,8 +32,9 @@ class _Istighosah_fixState extends State<Istighosah_fix>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color.fromARGB(255, 68, 118, 218),
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 68, 118, 218),
         centerTitle: true,
         title: Text(
           'Istighosah',
@@ -61,7 +62,7 @@ class _Istighosah_fixState extends State<Istighosah_fix>
                           labelColor: Colors.white,
                           indicatorColor: Colors.white,
                           indicator: BoxDecoration(
-                              color: Colors.blue,
+                              color: Color.fromARGB(255, 68, 118, 218),
                               borderRadius: BorderRadius.circular(10)),
                           controller: tabController,
                           tabs: [
