@@ -35,7 +35,8 @@ class _homeState extends State<home> {
                     decoration: BoxDecoration(
                       color: Color.fromARGB(200, 6, 44, 139),
                       image: DecorationImage(
-                          image: ExactAssetImage('assets/images/gambar1.jpeg'),
+                          image:
+                              ExactAssetImage('assets/images/gerbangdrone.jpg'),
                           alignment: Alignment(0, -1),
                           opacity: 220,
                           fit: BoxFit.fitWidth),
@@ -45,7 +46,7 @@ class _homeState extends State<home> {
                         Container(
                           height: 248,
                           child: Container(
-                            alignment: Alignment(0, 0.65),
+                            alignment: const Alignment(0, 0.65),
                             child: Text(
                               'Mini Awrad Santri',
                               style: TextStyle(
@@ -58,8 +59,9 @@ class _homeState extends State<home> {
                           ),
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image:
-                                      ExactAssetImage('assets/images/logo.png'),
+                                  image: ExactAssetImage(
+                                      'assets/images/LogoApp.png',
+                                      scale: 12),
                                   alignment: Alignment(0, -0.1))),
                         ),
                         Container(

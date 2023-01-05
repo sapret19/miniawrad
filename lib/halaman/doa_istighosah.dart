@@ -61,7 +61,7 @@ class _Doa_IstighosahState extends State<Doa_Istighosah> {
                                 children: [
                                   Container(
                                     padding: EdgeInsets.only(left: 8, right: 8),
-                                    child: Text(
+                                    child: SelectableText(
                                       textAlign: TextAlign.end,
                                       items[index].arabic.toString(),
                                       style: TextStyle(

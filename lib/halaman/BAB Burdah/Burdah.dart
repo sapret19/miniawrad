@@ -29,6 +29,7 @@ class _BurdahState extends State<Burdah> {
     return Scaffold(
       // backgroundColor: Color.fromARGB(211, 235, 234, 234),
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 68, 118, 218),
         centerTitle: true,
         title: Text(
           'Burdah',
@@ -83,7 +84,7 @@ class _BurdahState extends State<Burdah> {
                                 Align(
                                   alignment: Alignment.centerLeft,
                                   // padding: EdgeInsets.only(left: 8, right: 8),
-                                  child: Text(
+                                  child: SelectableText(
                                     textAlign: TextAlign.start,
                                     items[index].arabic2.toString(),
                                     style: TextStyle(
@@ -109,7 +110,6 @@ class _BurdahState extends State<Burdah> {
           }
         },
       ),
-
     );
   }
 }

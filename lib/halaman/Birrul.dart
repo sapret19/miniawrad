@@ -24,6 +24,7 @@ class _BirrulWalidaynState extends State<BirrulWalidayn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 68, 118, 218),
           centerTitle: true,
           title: (Text(
             'Birrul Walidayn',
@@ -64,7 +65,7 @@ class _BirrulWalidaynState extends State<BirrulWalidayn> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.only(left: 8, right: 8),
-                                  child: Text(
+                                  child: SelectableText(
                                     textAlign: TextAlign.end,
                                     items[index].arabic.toString(),
                                     style: TextStyle(
@@ -79,7 +80,7 @@ class _BirrulWalidaynState extends State<BirrulWalidayn> {
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 8, right: 8),
-                                  child: Text(
+                                  child: SelectableText(
                                     textAlign: TextAlign.justify,
                                     items[index].arti.toString(),
                                     style: const TextStyle(
@@ -107,7 +108,6 @@ class _BirrulWalidaynState extends State<BirrulWalidayn> {
           }
         },
       ),
-
     );
   }
 }

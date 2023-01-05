@@ -24,6 +24,7 @@ class _TawassulState extends State<Tawassul> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 68, 118, 218),
           centerTitle: true,
           title: (Text(
             'Tawassul',
@@ -64,7 +65,7 @@ class _TawassulState extends State<Tawassul> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.only(left: 8, right: 8),
-                                  child: Text(
+                                  child: SelectableText(
                                     textAlign: TextAlign.end,
                                     items[index].arabic.toString(),
                                     style: TextStyle(
@@ -90,7 +91,6 @@ class _TawassulState extends State<Tawassul> {
           }
         },
       ),
-
     );
   }
 }
