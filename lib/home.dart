@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:awrad/doa.dart';
 import 'package:awrad/halaman/BAB%20Burdah/cobaBurdah.dart';
 import 'package:awrad/halaman/Birrul.dart';
@@ -11,6 +13,7 @@ import 'package:awrad/halaman/cobawaqiah.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -20,6 +23,22 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+  void _showDialog() {
+    showDialog(
+        context: this.context,
+        builder: (context) {
+          return AlertDialog(
+              title: Text("Informasi Aplikasi"), content: Text("Versi"));
+        });
+  }
+
+//sementara ini adalah display package yang belum sukses
+  void _showPackage() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    String version = packageInfo.version;
+    String code = packageInfo.buildNumber;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,6 +62,21 @@ class _homeState extends State<home> {
                     ),
                     child: Column(
                       children: [
+                        MaterialButton(
+                          onPressed: _showDialog,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 14, right: 15),
+                                child: Image.asset(
+                                  'assets/images/info.png',
+                                  width: 25,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                         Container(
                           height: 248,
                           child: Container(
@@ -57,12 +91,23 @@ class _homeState extends State<home> {
                               ),
                             ),
                           ),
+                          // ignore: prefer_const_constructors
                           decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: ExactAssetImage(
-                                      'assets/images/LogoApp.png',
-                                      scale: 12),
-                                  alignment: Alignment(0, -0.1))),
+                            image: DecorationImage(
+                                image: ExactAssetImage(
+                                    'assets/images/logoapp.png',
+                                    scale: 12),
+                                alignment: Alignment(0, -0.1)),
+                            // ignore: prefer_const_literals_to_create_immutables
+                            // boxShadow: [
+                            //   BoxShadow(
+                            //       color: Color.fromARGB(255, 53, 52, 52)
+                            //           .withOpacity(0.3),
+                            //       spreadRadius: 1,
+                            //       blurRadius: 10,
+                            //       offset: Offset(0, 0))
+                            // ]
+                          ),
                         ),
                         Container(
                           height: 500,
