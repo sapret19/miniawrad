@@ -32,7 +32,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  package_info_plus: ^3.0.2
+  new_version: ^0.3.1
+
   zoom_widget: ^2.0.0
 
 dev_dependencies:

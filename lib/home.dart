@@ -13,7 +13,9 @@ import 'package:awrad/halaman/cobawaqiah.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:package_info_plus/package_info_plus.dart';
+
+
+// import 'package:package_info_plus/package_info_plus.dart';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -25,19 +27,18 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   void _showDialog() {
     showDialog(
-        context: this.context,
+        context: context,
         builder: (context) {
           return AlertDialog(
               title: Text("Informasi Aplikasi"), content: Text("Versi"));
         });
   }
-
 //sementara ini adalah display package yang belum sukses
-  void _showPackage() async {
-    PackageInfo packageInfo = await PackageInfo.fromPlatform();
-    String version = packageInfo.version;
-    String code = packageInfo.buildNumber;
-  }
+  // void _showPackage() async {
+  //   PackageInfo packageInfo = await PackageInfo.fromPlatform();
+  //   String version = packageInfo.version;
+  //   String code = packageInfo.buildNumber;
+  // }
 
   @override
   Widget build(BuildContext context) {
