@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:awrad/doa.dart';
 import 'package:awrad/halaman/BAB%20Burdah/cobaBurdah.dart';
 import 'package:awrad/halaman/Birrul.dart';
@@ -13,7 +11,6 @@ import 'package:awrad/halaman/cobawaqiah.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-
 
 // import 'package:package_info_plus/package_info_plus.dart';
 
@@ -53,7 +50,7 @@ class _homeState extends State<home> {
                   Flexible(
                       child: Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(200, 6, 44, 139),
+                      color: Color.fromARGB(199, 6, 37, 116),
                       image: DecorationImage(
                           image:
                               ExactAssetImage('assets/images/gerbangdrone.jpg'),
@@ -78,40 +75,39 @@ class _homeState extends State<home> {
                             ],
                           ),
                         ),
-                        Container(
-                          height: 248,
+                        Expanded(
                           child: Container(
-                            alignment: const Alignment(0, 0.65),
-                            child: Text(
-                              'Mini Awrad Santri',
-                              style: TextStyle(
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
+                            child: Container(
+                              alignment: const Alignment(0, 0.65),
+                              child: Text(
+                                'Mini Awrad Santri',
+                                style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
                               ),
                             ),
-                          ),
-                          // ignore: prefer_const_constructors
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: ExactAssetImage(
-                                    'assets/images/logoapp.png',
-                                    scale: 12),
-                                alignment: Alignment(0, -0.1)),
-                            // ignore: prefer_const_literals_to_create_immutables
-                            // boxShadow: [
-                            //   BoxShadow(
-                            //       color: Color.fromARGB(255, 53, 52, 52)
-                            //           .withOpacity(0.3),
-                            //       spreadRadius: 1,
-                            //       blurRadius: 10,
-                            //       offset: Offset(0, 0))
-                            // ]
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: ExactAssetImage(
+                                      'assets/images/logoapp.png',
+                                      scale: 12),
+                                  alignment: Alignment(0, -0.1)),
+                              // ignore: prefer_const_literals_to_create_immutables
+                              // boxShadow: [
+                              //   BoxShadow(
+                              //       color: Color.fromARGB(255, 53, 52, 52)
+                              //           .withOpacity(0.3),
+                              //       spreadRadius: 1,
+                              //       blurRadius: 10,
+                              //       offset: Offset(0, 0))
+                              // ]
+                            ),
                           ),
                         ),
                         Container(
-                          height: 500,
                           margin: EdgeInsets.only(top: 54),
                           decoration: BoxDecoration(
                               color: Colors.white,
