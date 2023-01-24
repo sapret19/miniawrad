@@ -33,7 +33,6 @@ dependencies:
   flutter:
     sdk: flutter
   new_version: ^0.3.1
-
   zoom_widget: ^2.0.0
 
 dev_dependencies:

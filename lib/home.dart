@@ -48,12 +48,14 @@ class _homeState extends State<home> {
               child: Column(
                 children: <Widget>[
                   Flexible(
-                      child: Container(
+                      child: 
+                      Container(
                     decoration: BoxDecoration(
                       color: Color.fromARGB(199, 6, 37, 116),
                       image: DecorationImage(
-                          image:
-                              ExactAssetImage('assets/images/gerbangdrone.jpg'),
+                          image: ExactAssetImage(
+                            'assets/images/gerbangdrone.jpg',
+                          ),
                           alignment: Alignment(0, -1),
                           opacity: 220,
                           fit: BoxFit.fitWidth),
@@ -75,156 +77,112 @@ class _homeState extends State<home> {
                             ],
                           ),
                         ),
-                        Expanded(
+                        Container(
                           child: Container(
-                            child: Container(
-                              alignment: const Alignment(0, 0.65),
-                              child: Text(
-                                'Mini Awrad Santri',
-                                style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),
+                            height: 213,
+                            alignment: const Alignment(0, 0.65),
+                            child: Text(
+                              'Mini Awrad Santri',
+                              style: TextStyle(
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 20,
                               ),
                             ),
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: ExactAssetImage(
-                                      'assets/images/logoapp.png',
-                                      scale: 12),
-                                  alignment: Alignment(0, -0.1)),
-                              // ignore: prefer_const_literals_to_create_immutables
-                              // boxShadow: [
-                              //   BoxShadow(
-                              //       color: Color.fromARGB(255, 53, 52, 52)
-                              //           .withOpacity(0.3),
-                              //       spreadRadius: 1,
-                              //       blurRadius: 10,
-                              //       offset: Offset(0, 0))
-                              // ]
-                            ),
+                          ),
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: ExactAssetImage(
+                                    'assets/images/logoapp.png',
+                                    scale: 12),
+                                alignment: Alignment(0, -0.1)),
+                            // ignore: prefer_const_literals_to_create_immutables
+                            // boxShadow: [
+                            //   BoxShadow(
+                            //       color: Color.fromARGB(255, 53, 52, 52)
+                            //           .withOpacity(0.3),
+                            //       spreadRadius: 1,
+                            //       blurRadius: 10,
+                            //       offset: Offset(0, 0))
+                            // ]
                           ),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(top: 54),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(15),
-                                  topRight: Radius.circular(15))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Column(
-                                children: [
-                                  //Tawassul Sek
-                                  InkWell(
-                                    onTap: () => setState(() {
-                                      Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) {
-                                        return Tawassul();
-                                      }));
-                                    }),
-                                    child: Container(
-                                        width: 150,
-                                        height: 140,
-                                        transform: Matrix4.translationValues(
-                                            0, -40, 2),
-                                        margin: EdgeInsets.only(right: 20),
-                                        decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                255, 68, 118, 218),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(15)),
-                                            image: DecorationImage(
-                                                image: ExactAssetImage(
-                                                    'assets/images/tawassul.png'),
-                                                alignment: Alignment(0, -0.5)),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: Color.fromARGB(
-                                                        255, 20, 20, 20)
-                                                    .withOpacity(0.3),
-                                                spreadRadius: 3,
-                                                blurRadius: 10,
-                                                offset: Offset(0, 0),
-                                              )
-                                            ]),
-                                        child: Container(
-                                          alignment: Alignment(0, 0.7),
-                                          child: Text(
-                                            'Tawassul',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontFamily: 'Montserrat',
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 16),
-                                          ),
-                                        )),
-                                  ),
-
-                                  // YASIN & TAHLIL
-                                  InkWell(
-                                    onTap: () => setState(() {
-                                      Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) {
-                                        return YasinTahlil();
-                                      }));
-                                    }),
-                                    child: Container(
-                                        width: 150,
-                                        height: 140,
-                                        transform: Matrix4.translationValues(
-                                            0, -60, 2),
-                                        margin:
-                                            EdgeInsets.only(top: 40, right: 20),
-                                        decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                255, 68, 118, 218),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(15)),
-                                            image: DecorationImage(
-                                                image: ExactAssetImage(
-                                                    'assets/images/yasintahlil.png'),
-                                                alignment: Alignment(0, -0.5)),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: Color.fromARGB(
-                                                        255, 20, 20, 20)
-                                                    .withOpacity(0.3),
-                                                spreadRadius: 3,
-                                                blurRadius: 10,
-                                                offset: Offset(0, 0),
-                                              )
-                                            ]),
-                                        child: Container(
-                                          alignment: Alignment(0, 0.7),
-                                          child: Text(
-                                            'Yasin & Tahlil',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontFamily: 'Montserrat',
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 16),
-                                          ),
-                                        )),
-                                  ),
-                                  // AL-WAQI'AH
-                                  InkWell(
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(top: 54),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(15),
+                                    topRight: Radius.circular(15))),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Column(
+                                  children: [
+                                    //Tawassul Sek
+                                    InkWell(
                                       onTap: () => setState(() {
-                                            Navigator.push(context,
-                                                MaterialPageRoute(
-                                                    builder: (context) {
-                                              return IniWaqiah();
-                                            }));
-                                          }),
+                                        Navigator.push(context,
+                                            MaterialPageRoute(
+                                                builder: (context) {
+                                          return Tawassul();
+                                        }));
+                                      }),
                                       child: Container(
                                           width: 150,
                                           height: 140,
                                           transform: Matrix4.translationValues(
-                                              0, -80, 2),
+                                              0, -40, 2),
+                                          margin: EdgeInsets.only(right: 20),
+                                          decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 68, 118, 218),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(15)),
+                                              image: DecorationImage(
+                                                  image: ExactAssetImage(
+                                                      'assets/images/tawassul.png'),
+                                                  alignment:
+                                                      Alignment(0, -0.5)),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Color.fromARGB(
+                                                          255, 20, 20, 20)
+                                                      .withOpacity(0.3),
+                                                  spreadRadius: 3,
+                                                  blurRadius: 10,
+                                                  offset: Offset(0, 0),
+                                                )
+                                              ]),
+                                          child: Container(
+                                            alignment: Alignment(0, 0.7),
+                                            child: Text(
+                                              'Tawassul',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontFamily: 'Montserrat',
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 16),
+                                            ),
+                                          )),
+                                    ),
+
+                                    // YASIN & TAHLIL
+                                    InkWell(
+                                      onTap: () => setState(() {
+                                        Navigator.push(context,
+                                            MaterialPageRoute(
+                                                builder: (context) {
+                                          return YasinTahlil();
+                                        }));
+                                      }),
+                                      child: Container(
+                                          width: 150,
+                                          height: 140,
+                                          transform: Matrix4.translationValues(
+                                              0, -60, 2),
                                           margin: EdgeInsets.only(
                                               top: 40, right: 20),
                                           decoration: BoxDecoration(
@@ -234,7 +192,7 @@ class _homeState extends State<home> {
                                                   Radius.circular(15)),
                                               image: DecorationImage(
                                                   image: ExactAssetImage(
-                                                      'assets/images/waqiah.png'),
+                                                      'assets/images/yasintahlil.png'),
                                                   alignment:
                                                       Alignment(0, -0.5)),
                                               boxShadow: [
@@ -250,123 +208,128 @@ class _homeState extends State<home> {
                                           child: Container(
                                             alignment: Alignment(0, 0.7),
                                             child: Text(
-                                              'Al-Waqiah',
+                                              'Yasin & Tahlil',
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontFamily: 'Montserrat',
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 16),
                                             ),
-                                          )))
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  InkWell(
-                                    onTap: () => setState(() {
-                                      Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) {
-                                        return BirrulWalidayn();
-                                      }));
-                                    }),
-                                    child: Container(
-                                        // BIRRUL WALIDAYN
-                                        width: 150,
-                                        height: 140,
-                                        transform: Matrix4.translationValues(
-                                            0, -40, 2),
-                                        margin: EdgeInsets.only(left: 20),
-                                        decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                255, 68, 118, 218),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(15)),
-                                            image: DecorationImage(
-                                                image: ExactAssetImage(
-                                                    'assets/images/birrul.png'),
-                                                alignment: Alignment(0, -0.5)),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: Color.fromARGB(
-                                                        255, 20, 20, 20)
-                                                    .withOpacity(0.3),
-                                                spreadRadius: 3,
-                                                blurRadius: 10,
-                                                offset: Offset(0, 0),
-                                              )
-                                            ]),
+                                          )),
+                                    ),
+                                    // AL-WAQI'AH
+                                    InkWell(
+                                        onTap: () => setState(() {
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) {
+                                                return IniWaqiah();
+                                              }));
+                                            }),
                                         child: Container(
-                                          alignment: Alignment(0, 0.7),
-                                          child: Text(
-                                            'Birrul Walidayn',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontFamily: 'Montserrat',
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 16),
-                                          ),
-                                        )),
-                                  ),
-                                  // ISTIGHOSAH
-                                  InkWell(
-                                    onTap: () => setState(() {
-                                      Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) {
-                                        return Istighosah_fix();
-                                      }));
-                                    }),
-                                    child: Container(
-                                        width: 150,
-                                        height: 140,
-                                        transform: Matrix4.translationValues(
-                                            0, -60, 2),
-                                        margin:
-                                            EdgeInsets.only(top: 40, left: 20),
-                                        decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                255, 68, 118, 218),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(15)),
-                                            image: DecorationImage(
-                                                image: ExactAssetImage(
-                                                    'assets/images/istighosah.png'),
-                                                alignment: Alignment(0, -0.5)),
-                                            boxShadow: [
-                                              BoxShadow(
+                                            width: 150,
+                                            height: 140,
+                                            transform:
+                                                Matrix4.translationValues(
+                                                    0, -80, 2),
+                                            margin: EdgeInsets.only(
+                                                top: 40, right: 20),
+                                            decoration: BoxDecoration(
                                                 color: Color.fromARGB(
-                                                        255, 20, 20, 20)
-                                                    .withOpacity(0.3),
-                                                spreadRadius: 3,
-                                                blurRadius: 10,
-                                                offset: Offset(0, 0),
-                                              )
-                                            ]),
-                                        child: Container(
-                                          alignment: Alignment(0, 0.7),
-                                          child: Text(
-                                            'Istighosah',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontFamily: 'Montserrat',
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 16),
-                                          ),
-                                        )),
-                                  ),
-                                  // BURDAH
-                                  InkWell(
+                                                    255, 68, 118, 218),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(15)),
+                                                image: DecorationImage(
+                                                    image: ExactAssetImage(
+                                                        'assets/images/waqiah.png'),
+                                                    alignment:
+                                                        Alignment(0, -0.5)),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Color.fromARGB(
+                                                            255, 20, 20, 20)
+                                                        .withOpacity(0.3),
+                                                    spreadRadius: 3,
+                                                    blurRadius: 10,
+                                                    offset: Offset(0, 0),
+                                                  )
+                                                ]),
+                                            child: Container(
+                                              alignment: Alignment(0, 0.7),
+                                              child: Text(
+                                                'Al-Waqiah',
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontFamily: 'Montserrat',
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 16),
+                                              ),
+                                            )))
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    InkWell(
                                       onTap: () => setState(() {
-                                            Navigator.push(context,
-                                                MaterialPageRoute(
-                                                    builder: (context) {
-                                              return Burdah();
-                                            }));
-                                          }),
+                                        Navigator.push(context,
+                                            MaterialPageRoute(
+                                                builder: (context) {
+                                          return BirrulWalidayn();
+                                        }));
+                                      }),
+                                      child: Container(
+                                          // BIRRUL WALIDAYN
+                                          width: 150,
+                                          height: 140,
+                                          transform: Matrix4.translationValues(
+                                              0, -40, 2),
+                                          margin: EdgeInsets.only(left: 20),
+                                          decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 68, 118, 218),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(15)),
+                                              image: DecorationImage(
+                                                  image: ExactAssetImage(
+                                                      'assets/images/birrul.png'),
+                                                  alignment:
+                                                      Alignment(0, -0.5)),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Color.fromARGB(
+                                                          255, 20, 20, 20)
+                                                      .withOpacity(0.3),
+                                                  spreadRadius: 3,
+                                                  blurRadius: 10,
+                                                  offset: Offset(0, 0),
+                                                )
+                                              ]),
+                                          child: Container(
+                                            alignment: Alignment(0, 0.7),
+                                            child: Text(
+                                              'Birrul Walidayn',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontFamily: 'Montserrat',
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 16),
+                                            ),
+                                          )),
+                                    ),
+                                    // ISTIGHOSAH
+                                    InkWell(
+                                      onTap: () => setState(() {
+                                        Navigator.push(context,
+                                            MaterialPageRoute(
+                                                builder: (context) {
+                                          return Istighosah_fix();
+                                        }));
+                                      }),
                                       child: Container(
                                           width: 150,
                                           height: 140,
                                           transform: Matrix4.translationValues(
-                                              0, -80, 2),
+                                              0, -60, 2),
                                           margin: EdgeInsets.only(
                                               top: 40, left: 20),
                                           decoration: BoxDecoration(
@@ -376,7 +339,7 @@ class _homeState extends State<home> {
                                                   Radius.circular(15)),
                                               image: DecorationImage(
                                                   image: ExactAssetImage(
-                                                      'assets/images/burdah.png'),
+                                                      'assets/images/istighosah.png'),
                                                   alignment:
                                                       Alignment(0, -0.5)),
                                               boxShadow: [
@@ -392,17 +355,67 @@ class _homeState extends State<home> {
                                           child: Container(
                                             alignment: Alignment(0, 0.7),
                                             child: Text(
-                                              'Burdah',
+                                              'Istighosah',
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontFamily: 'Montserrat',
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 16),
                                             ),
-                                          )))
-                                ],
-                              )
-                            ],
+                                          )),
+                                    ),
+                                    // BURDAH
+                                    InkWell(
+                                        onTap: () => setState(() {
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) {
+                                                return Burdah();
+                                              }));
+                                            }),
+                                        child: Container(
+                                            width: 150,
+                                            height: 140,
+                                            transform:
+                                                Matrix4.translationValues(
+                                                    0, -80, 2),
+                                            margin: EdgeInsets.only(
+                                                top: 40, left: 20),
+                                            decoration: BoxDecoration(
+                                                color: Color.fromARGB(
+                                                    255, 68, 118, 218),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(15)),
+                                                image: DecorationImage(
+                                                    image: ExactAssetImage(
+                                                        'assets/images/burdah.png'),
+                                                    alignment:
+                                                        Alignment(0, -0.5)),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Color.fromARGB(
+                                                            255, 20, 20, 20)
+                                                        .withOpacity(0.3),
+                                                    spreadRadius: 3,
+                                                    blurRadius: 10,
+                                                    offset: Offset(0, 0),
+                                                  )
+                                                ]),
+                                            child: Container(
+                                              alignment: Alignment(0, 0.7),
+                                              child: Text(
+                                                'Burdah',
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontFamily: 'Montserrat',
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 16),
+                                              ),
+                                            )))
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ],

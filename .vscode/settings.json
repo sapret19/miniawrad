@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
         "Waqiah"
-    ]
+    ],
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "dart.previewFlutterUiGuides": true
 }
