@@ -24,14 +24,6 @@ class _IniWaqiahState extends State<IniWaqiah> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 68, 118, 218),
-          centerTitle: true,
-          title: (Text(
-            'Al-Waqiah',
-            style: TextStyle(
-                fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
-          ))),
       body: FutureBuilder(
         future: ReadJsonData(),
         builder: (context, data) {

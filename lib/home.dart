@@ -8,6 +8,9 @@ import 'package:awrad/halaman/Tawassul.dart';
 import 'package:awrad/halaman/YasinTahlil.dart';
 import 'package:awrad/halaman/Yasin.dart';
 import 'package:awrad/halaman/cobawaqiah.dart';
+import 'package:awrad/halaman/Diba/diba.dart';
+import 'package:awrad/halaman/sabulmunjiyat.dart';
+import 'package:awrad/halaman/waqiah.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -44,7 +47,7 @@ class _homeState extends State<home> {
                     child: Column(
                       children: [
                         Container(
-                          height: 248,
+                          height: 200,
                           child: Container(
                             alignment: const Alignment(0, 0.65),
                             child: Text(
@@ -60,12 +63,12 @@ class _homeState extends State<home> {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: ExactAssetImage(
-                                      'assets/images/LogoApp.png',
+                                      'assets/images/logoapp.png',
                                       scale: 12),
                                   alignment: Alignment(0, -0.1))),
                         ),
                         Container(
-                          height: 500,
+                          height: 520,
                           margin: EdgeInsets.only(top: 54),
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -86,8 +89,8 @@ class _homeState extends State<home> {
                                       }));
                                     }),
                                     child: Container(
-                                        width: 150,
-                                        height: 140,
+                                        width: 120,
+                                        height: 110,
                                         transform: Matrix4.translationValues(
                                             0, -40, 2),
                                         margin: EdgeInsets.only(right: 20),
@@ -98,7 +101,8 @@ class _homeState extends State<home> {
                                                 Radius.circular(15)),
                                             image: DecorationImage(
                                                 image: ExactAssetImage(
-                                                    'assets/images/tawassul.png'),
+                                                    'assets/images/tawassul.png',
+                                                    scale: 1.3),
                                                 alignment: Alignment(0, -0.5)),
                                             boxShadow: [
                                               BoxShadow(
@@ -118,7 +122,7 @@ class _homeState extends State<home> {
                                                 color: Colors.white,
                                                 fontFamily: 'Montserrat',
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 16),
+                                                fontSize: 12),
                                           ),
                                         )),
                                   ),
@@ -132,8 +136,8 @@ class _homeState extends State<home> {
                                       }));
                                     }),
                                     child: Container(
-                                        width: 150,
-                                        height: 140,
+                                        width: 120,
+                                        height: 110,
                                         transform: Matrix4.translationValues(
                                             0, -60, 2),
                                         margin:
@@ -145,7 +149,8 @@ class _homeState extends State<home> {
                                                 Radius.circular(15)),
                                             image: DecorationImage(
                                                 image: ExactAssetImage(
-                                                    'assets/images/yasintahlil.png'),
+                                                    'assets/images/yasintahlil.png',
+                                                    scale: 1.3),
                                                 alignment: Alignment(0, -0.5)),
                                             boxShadow: [
                                               BoxShadow(
@@ -165,7 +170,7 @@ class _homeState extends State<home> {
                                                 color: Colors.white,
                                                 fontFamily: 'Montserrat',
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 16),
+                                                fontSize: 12),
                                           ),
                                         )),
                                   ),
@@ -175,12 +180,12 @@ class _homeState extends State<home> {
                                             Navigator.push(context,
                                                 MaterialPageRoute(
                                                     builder: (context) {
-                                              return IniWaqiah();
+                                              return Waqiah();
                                             }));
                                           }),
                                       child: Container(
-                                          width: 150,
-                                          height: 140,
+                                          width: 120,
+                                          height: 110,
                                           transform: Matrix4.translationValues(
                                               0, -80, 2),
                                           margin: EdgeInsets.only(
@@ -192,7 +197,8 @@ class _homeState extends State<home> {
                                                   Radius.circular(15)),
                                               image: DecorationImage(
                                                   image: ExactAssetImage(
-                                                      'assets/images/waqiah.png'),
+                                                      'assets/images/waqiah.png',
+                                                      scale: 1.3),
                                                   alignment:
                                                       Alignment(0, -0.5)),
                                               boxShadow: [
@@ -213,9 +219,54 @@ class _homeState extends State<home> {
                                                   color: Colors.white,
                                                   fontFamily: 'Montserrat',
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
+                                                  fontSize: 12),
                                             ),
-                                          )))
+                                          ))),
+                                  InkWell(
+                                    onTap: () => setState(() {
+                                      Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) {
+                                        return Diba();
+                                      }));
+                                    }),
+                                    child: Container(
+                                        width: 120,
+                                        height: 110,
+                                        transform: Matrix4.translationValues(
+                                            0, -60, 2),
+                                        margin: EdgeInsets.only(right: 20),
+                                        decoration: BoxDecoration(
+                                            color: Color.fromARGB(
+                                                255, 68, 118, 218),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(15)),
+                                            image: DecorationImage(
+                                                image: ExactAssetImage(
+                                                    'assets/images/tawassul.png',
+                                                    scale: 1.3),
+                                                alignment: Alignment(0, -0.5)),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Color.fromARGB(
+                                                        255, 20, 20, 20)
+                                                    .withOpacity(0.3),
+                                                spreadRadius: 3,
+                                                blurRadius: 10,
+                                                offset: Offset(0, 0),
+                                              )
+                                            ]),
+                                        child: Container(
+                                          alignment: Alignment(0, 0.7),
+                                          child: Text(
+                                            'Diba',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'Montserrat',
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12),
+                                          ),
+                                        )),
+                                  ),
                                 ],
                               ),
                               Column(
@@ -229,8 +280,8 @@ class _homeState extends State<home> {
                                     }),
                                     child: Container(
                                         // BIRRUL WALIDAYN
-                                        width: 150,
-                                        height: 140,
+                                        width: 120,
+                                        height: 110,
                                         transform: Matrix4.translationValues(
                                             0, -40, 2),
                                         margin: EdgeInsets.only(left: 20),
@@ -241,7 +292,8 @@ class _homeState extends State<home> {
                                                 Radius.circular(15)),
                                             image: DecorationImage(
                                                 image: ExactAssetImage(
-                                                    'assets/images/birrul.png'),
+                                                    'assets/images/birrul.png',
+                                                    scale: 1.3),
                                                 alignment: Alignment(0, -0.5)),
                                             boxShadow: [
                                               BoxShadow(
@@ -261,7 +313,7 @@ class _homeState extends State<home> {
                                                 color: Colors.white,
                                                 fontFamily: 'Montserrat',
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 16),
+                                                fontSize: 12),
                                           ),
                                         )),
                                   ),
@@ -274,8 +326,8 @@ class _homeState extends State<home> {
                                       }));
                                     }),
                                     child: Container(
-                                        width: 150,
-                                        height: 140,
+                                        width: 120,
+                                        height: 110,
                                         transform: Matrix4.translationValues(
                                             0, -60, 2),
                                         margin:
@@ -287,7 +339,8 @@ class _homeState extends State<home> {
                                                 Radius.circular(15)),
                                             image: DecorationImage(
                                                 image: ExactAssetImage(
-                                                    'assets/images/istighosah.png'),
+                                                    'assets/images/istighosah.png',
+                                                    scale: 1.3),
                                                 alignment: Alignment(0, -0.5)),
                                             boxShadow: [
                                               BoxShadow(
@@ -307,7 +360,7 @@ class _homeState extends State<home> {
                                                 color: Colors.white,
                                                 fontFamily: 'Montserrat',
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 16),
+                                                fontSize: 12),
                                           ),
                                         )),
                                   ),
@@ -321,8 +374,8 @@ class _homeState extends State<home> {
                                             }));
                                           }),
                                       child: Container(
-                                          width: 150,
-                                          height: 140,
+                                          width: 120,
+                                          height: 110,
                                           transform: Matrix4.translationValues(
                                               0, -80, 2),
                                           margin: EdgeInsets.only(
@@ -334,7 +387,8 @@ class _homeState extends State<home> {
                                                   Radius.circular(15)),
                                               image: DecorationImage(
                                                   image: ExactAssetImage(
-                                                      'assets/images/burdah.png'),
+                                                      'assets/images/burdah.png',
+                                                      scale: 1.3),
                                                   alignment:
                                                       Alignment(0, -0.5)),
                                               boxShadow: [
@@ -355,9 +409,54 @@ class _homeState extends State<home> {
                                                   color: Colors.white,
                                                   fontFamily: 'Montserrat',
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
+                                                  fontSize: 12),
                                             ),
-                                          )))
+                                          ))),
+                                  InkWell(
+                                    onTap: () => setState(() {
+                                      Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) {
+                                        return SabulMunjiyat();
+                                      }));
+                                    }),
+                                    child: Container(
+                                        width: 120,
+                                        height: 110,
+                                        transform: Matrix4.translationValues(
+                                            0, -60, 2),
+                                        margin: EdgeInsets.only(left: 20),
+                                        decoration: BoxDecoration(
+                                            color: Color.fromARGB(
+                                                255, 68, 118, 218),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(15)),
+                                            image: DecorationImage(
+                                                image: ExactAssetImage(
+                                                    'assets/images/tawassul.png',
+                                                    scale: 1.3),
+                                                alignment: Alignment(0, -0.5)),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Color.fromARGB(
+                                                        255, 20, 20, 20)
+                                                    .withOpacity(0.3),
+                                                spreadRadius: 3,
+                                                blurRadius: 10,
+                                                offset: Offset(0, 0),
+                                              )
+                                            ]),
+                                        child: Container(
+                                          alignment: Alignment(0, 0.7),
+                                          child: Text(
+                                            'Sabul Munjiyat',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'Montserrat',
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12),
+                                          ),
+                                        )),
+                                  ),
                                 ],
                               )
                             ],

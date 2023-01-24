@@ -1,34 +1,34 @@
 import 'dart:convert';
-import 'package:awrad/model/model_doa_waqiah.dart';
-import 'package:awrad/model/model_doaistighosah.dart';
-import 'package:awrad/model/model_tawassul.dart';
-import 'package:flutter/services.dart' as rootBundle;
+
+import 'package:awrad/model/model_diba/model_diba5.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' as rootBundle;
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class Doa_Waqiah extends StatefulWidget {
-  const Doa_Waqiah({super.key});
+class Diba5 extends StatefulWidget {
+  const Diba5({super.key});
 
   @override
-  State<Doa_Waqiah> createState() => _Doa_WaqiahState();
+  State<Diba5> createState() => _Diba5State();
 }
 
-class _Doa_WaqiahState extends State<Doa_Waqiah> {
-  Future<List<ModelDoaWaqiah>> ReadJsonData() async {
+class _Diba5State extends State<Diba5> {
+  Future<List<ModelDiba5>> ReadJsonData() async {
     final JsonData =
-        await rootBundle.rootBundle.loadString('assets/data/doa_waqiah.json');
+        await rootBundle.rootBundle.loadString('assets/data/diba5.json');
     final list = json.decode(JsonData) as List<dynamic>;
-    return list.map((e) => ModelDoaWaqiah.formJson(e)).toList();
+    return list.map((e) => ModelDiba5.fromJson(e)).toList();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(
+      //     backgroundColor: Color.fromARGB(255, 68, 118, 218),
       //     centerTitle: true,
       //     title: (Text(
-      //       'Tawassul',
+      //       'Ya Rabbi shalli...',
       //       style: TextStyle(
       //           fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
       //     ))),
@@ -38,7 +38,7 @@ class _Doa_WaqiahState extends State<Doa_Waqiah> {
           if (data.hasError) {
             return Center(child: Text("${data.error}"));
           } else if (data.hasData) {
-            var items = data.data as List<ModelDoaWaqiah>;
+            var items = data.data as List<ModelDiba5>;
             return ListView.builder(
                 itemCount: items == null ? 0 : items.length,
                 itemBuilder: (context, index) {
@@ -62,12 +62,12 @@ class _Doa_WaqiahState extends State<Doa_Waqiah> {
                                 EdgeInsets.only(bottom: 8, left: 20, right: 15),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Padding(
                                   padding: EdgeInsets.only(left: 8, right: 8),
                                   child: SelectableText(
-                                    textAlign: TextAlign.justify,
+                                    textAlign: TextAlign.end,
                                     items[index].arabic.toString(),
                                     style: TextStyle(
                                         fontSize: 20,
@@ -86,13 +86,12 @@ class _Doa_WaqiahState extends State<Doa_Waqiah> {
                 });
           } else {
             // show circular progress while data is getting fetched from json file
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
         },
       ),
-      //
     );
   }
 }

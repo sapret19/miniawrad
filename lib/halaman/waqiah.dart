@@ -1,21 +1,22 @@
 import 'package:awrad/halaman/Istighosah.dart';
 import 'package:awrad/halaman/cobadoaistighosah.dart';
 import 'package:awrad/halaman/cobaistighosah.dart';
+import 'package:awrad/halaman/cobawaqiah.dart';
 import 'package:awrad/halaman/doa_istighosah.dart';
+import 'package:awrad/halaman/doa_waqiah.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class Istighosah_fix extends StatefulWidget {
-  const Istighosah_fix({Key? key}) : super(key: key);
+class Waqiah extends StatefulWidget {
+  const Waqiah({Key? key}) : super(key: key);
 
   @override
-  _Istighosah_fixState createState() => _Istighosah_fixState();
+  _WaqiahState createState() => _WaqiahState();
 }
 
-class _Istighosah_fixState extends State<Istighosah_fix>
-    with SingleTickerProviderStateMixin {
+class _WaqiahState extends State<Waqiah> with SingleTickerProviderStateMixin {
   late TabController tabController;
   @override
   void initState() {
@@ -37,7 +38,7 @@ class _Istighosah_fixState extends State<Istighosah_fix>
         backgroundColor: Color.fromARGB(255, 68, 118, 218),
         centerTitle: true,
         title: Text(
-          'Istighosah',
+          'Al-Waqiah',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
@@ -69,7 +70,7 @@ class _Istighosah_fixState extends State<Istighosah_fix>
                             Tab(
                               child: Text(
                                 textAlign: TextAlign.center,
-                                'Istighosah',
+                                'Al-Waqiah',
                                 style: TextStyle(
                                     fontFamily: 'Montserrat',
                                     fontWeight: FontWeight.bold,
@@ -98,8 +99,8 @@ class _Istighosah_fixState extends State<Istighosah_fix>
                   child: TabBarView(
                 controller: tabController,
                 children: [
-                  IniIstighosah(),
-                  IniDoaIstighosah(),
+                  IniWaqiah(),
+                  Doa_Waqiah(),
                 ],
               ))
             ],
