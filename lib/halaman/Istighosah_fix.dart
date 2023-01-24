@@ -67,7 +67,7 @@ class _Istighosah_fixState extends State<Istighosah_fix>
                           controller: tabController,
                           tabs: [
                             Tab(
-                              child: Text(
+                              child: const Text(
                                 textAlign: TextAlign.center,
                                 'Istighosah',
                                 style: TextStyle(
