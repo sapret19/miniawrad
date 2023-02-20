@@ -31,7 +31,8 @@ class _BirrulWalidaynState extends State<BirrulWalidayn> {
             style: TextStyle(
                 fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
           ))),
-      body: FutureBuilder(
+      body: 
+      FutureBuilder(
         future: ReadJsonData(),
         builder: (context, data) {
           if (data.hasError) {

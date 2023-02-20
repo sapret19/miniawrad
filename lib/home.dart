@@ -81,7 +81,7 @@ class _homeState extends State<home> {
                         Expanded(
                           child: Container(
                             child: Container(
-                              alignment: const Alignment(0, 0.65),
+                              alignment: const Alignment(0, 0.8),
                               child: Text(
                                 'Mini Awrad Santri',
                                 style: TextStyle(
@@ -96,8 +96,8 @@ class _homeState extends State<home> {
                               image: DecorationImage(
                                   image: ExactAssetImage(
                                       'assets/images/logoapp.png',
-                                      scale: 12),
-                                  alignment: Alignment(0, -0.1)),
+                                      scale: 15),
+                                  alignment: Alignment(0, -0.5)),
                               // ignore: prefer_const_literals_to_create_immutables
                               // boxShadow: [
                               //   BoxShadow(

@@ -49,9 +49,9 @@ class _TawassulState extends State<Tawassul> {
           } else if (data.hasData) {
             var items = data.data as List<ModelTawassul>;
             return InteractiveViewer(
-              panEnabled: false, // Set it to false to prevent panning.
-              boundaryMargin: EdgeInsets.all(80),
-              minScale: 0.5,
+              panEnabled: true, // Set it to false to prevent panning.
+              boundaryMargin: EdgeInsets.all(0),
+              minScale: 1,
               maxScale: 4,
               child: ListView.builder(
                   itemCount: items == null ? 0 : items.length,

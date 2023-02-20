@@ -107,7 +107,7 @@ class _TabBarPageState extends State<YasinTahlil>
                 child: TabBarView(
                   controller: tabController,
                   children: const [
-                    Yasin(),
+                    ,
                     Tahlil(),
                     DoaTahlil(),
                   ],
